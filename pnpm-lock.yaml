@@ -1,68 +1,105 @@
 lockfileVersion: '6.0'
 
-dependencies:
-  vue:
-    specifier: ^3.2.47
-    version: 3.3.4
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
 
-devDependencies:
-  '@testing-library/vue':
-    specifier: ^7.0.0
-    version: 7.0.0(@vue/compiler-sfc@3.3.4)(vue@3.3.4)
-  '@typescript-eslint/eslint-plugin':
-    specifier: ^5.60.0
-    version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
-  '@typescript-eslint/parser':
-    specifier: ^5.60.0
-    version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
-  '@vitejs/plugin-vue':
-    specifier: ^4.1.0
-    version: 4.2.3(vite@4.3.9)(vue@3.3.4)
-  '@vitejs/plugin-vue-jsx':
-    specifier: ^3.0.1
-    version: 3.0.1(vite@4.3.9)(vue@3.3.4)
-  eslint:
-    specifier: ^8.43.0
-    version: 8.43.0
-  eslint-config-prettier:
-    specifier: ^8.8.0
-    version: 8.8.0(eslint@8.43.0)
-  eslint-plugin-prettier:
-    specifier: ^4.2.1
-    version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
-  eslint-plugin-vue:
-    specifier: ^9.15.1
-    version: 9.15.1(eslint@8.43.0)
-  happy-dom:
-    specifier: ^9.20.3
-    version: 9.20.3
-  husky:
-    specifier: ^8.0.3
-    version: 8.0.3
-  lint-staged:
-    specifier: ^13.2.2
-    version: 13.2.2
-  prettier:
-    specifier: ^2.8.8
-    version: 2.8.8
-  typescript:
-    specifier: ^5.0.2
-    version: 5.1.3
-  vite:
-    specifier: ^4.3.9
-    version: 4.3.9(@types/node@20.3.2)
-  vitepress:
-    specifier: 1.0.0-beta.3
-    version: 1.0.0-beta.3(@algolia/client-search@4.18.0)(react-dom@16.14.0)(react@16.14.0)(search-insights@2.6.0)
-  vitepress-theme-demoblock:
-    specifier: ^1.4.2
-    version: 1.4.2(react-dom@16.14.0)(react@16.14.0)
-  vitest:
-    specifier: ^0.32.2
-    version: 0.32.2(happy-dom@9.20.3)
-  vue-tsc:
-    specifier: ^1.4.2
-    version: 1.8.1(typescript@5.1.3)
+importers:
+
+  .:
+    dependencies:
+      '@vue3-ui/components':
+        specifier: workspace:^
+        version: link:packages/components
+      '@vue3-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:packages/theme-chalk
+      vue:
+        specifier: ^3.3.4
+        version: 3.3.4
+    devDependencies:
+      '@testing-library/vue':
+        specifier: ^7.0.0
+        version: 7.0.0(@vue/compiler-sfc@3.3.4)(vue@3.3.4)
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^5.60.0
+        version: 5.60.0(@typescript-eslint/parser@5.60.0)(eslint@8.43.0)(typescript@5.1.3)
+      '@typescript-eslint/parser':
+        specifier: ^5.60.0
+        version: 5.60.0(eslint@8.43.0)(typescript@5.1.3)
+      '@vitejs/plugin-vue':
+        specifier: ^4.1.0
+        version: 4.2.3(vite@4.3.9)(vue@3.3.4)
+      '@vitejs/plugin-vue-jsx':
+        specifier: ^3.0.1
+        version: 3.0.1(vite@4.3.9)(vue@3.3.4)
+      eslint:
+        specifier: ^8.43.0
+        version: 8.43.0
+      eslint-config-prettier:
+        specifier: ^8.8.0
+        version: 8.8.0(eslint@8.43.0)
+      eslint-plugin-prettier:
+        specifier: ^4.2.1
+        version: 4.2.1(eslint-config-prettier@8.8.0)(eslint@8.43.0)(prettier@2.8.8)
+      eslint-plugin-vue:
+        specifier: ^9.15.1
+        version: 9.15.1(eslint@8.43.0)
+      happy-dom:
+        specifier: ^9.20.3
+        version: 9.20.3
+      husky:
+        specifier: ^8.0.3
+        version: 8.0.3
+      lint-staged:
+        specifier: ^13.2.2
+        version: 13.2.2
+      prettier:
+        specifier: ^2.8.8
+        version: 2.8.8
+      sass:
+        specifier: ^1.63.6
+        version: 1.63.6
+      typescript:
+        specifier: ^5.0.2
+        version: 5.1.3
+      vite:
+        specifier: ^4.3.9
+        version: 4.3.9(@types/node@20.3.2)(sass@1.63.6)
+      vitest:
+        specifier: ^0.32.2
+        version: 0.32.2(happy-dom@9.20.3)(sass@1.63.6)
+      vue-tsc:
+        specifier: ^1.4.2
+        version: 1.8.1(typescript@5.1.3)
+
+  docs:
+    devDependencies:
+      '@vitejs/plugin-vue-jsx':
+        specifier: ^3.0.1
+        version: 3.0.1(vite@4.3.9)(vue@3.3.4)
+      vite:
+        specifier: ^4.3.9
+        version: 4.3.9(@types/node@20.3.2)(sass@1.63.6)
+      vitepress:
+        specifier: 1.0.0-beta.3
+        version: 1.0.0-beta.3(@algolia/client-search@4.18.0)(react-dom@16.14.0)(react@16.14.0)(sass@1.63.6)(search-insights@2.6.0)
+      vitepress-theme-demoblock:
+        specifier: ^1.4.2
+        version: 1.4.2(react-dom@16.14.0)(react@16.14.0)(sass@1.63.6)
+
+  packages/components:
+    dependencies:
+      '@vue3-ui/theme-chalk':
+        specifier: workspace:^
+        version: link:../theme-chalk
+      '@vue3-ui/utils':
+        specifier: workspace:^
+        version: link:../utils
+
+  packages/theme-chalk: {}
+
+  packages/utils: {}
 
 packages:
 
@@ -1133,7 +1170,7 @@ packages:
       '@babel/core': 7.22.5
       '@babel/plugin-transform-typescript': 7.22.5(@babel/core@7.22.5)
       '@vue/babel-plugin-jsx': 1.1.1(@babel/core@7.22.5)
-      vite: 4.3.9(@types/node@20.3.2)
+      vite: 4.3.9(@types/node@20.3.2)(sass@1.63.6)
       vue: 3.3.4
     transitivePeerDependencies:
       - supports-color
@@ -1145,7 +1182,7 @@ packages:
     peerDependencies:
       vite: ^2.5.10
     dependencies:
-      vite: 2.9.16
+      vite: 2.9.16(sass@1.63.6)
     dev: true
 
   /@vitejs/plugin-vue@4.2.3(vite@4.3.9)(vue@3.3.4):
@@ -1155,7 +1192,7 @@ packages:
       vite: ^4.0.0
       vue: ^3.2.25
     dependencies:
-      vite: 4.3.9(@types/node@20.3.2)
+      vite: 4.3.9(@types/node@20.3.2)(sass@1.63.6)
       vue: 3.3.4
     dev: true
 
@@ -1546,6 +1583,14 @@ packages:
     engines: {node: '>=12'}
     dev: true
 
+  /anymatch@3.1.3:
+    resolution: {integrity: sha512-KMReFUr0B4t+D+OBkjR3KYqvocp2XaSzO55UcB6mgQMd3KbcE+mWTyvVV7D/zsdEbNnV6acZUutkiHQXvTr1Rw==}
+    engines: {node: '>= 8'}
+    dependencies:
+      normalize-path: 3.0.0
+      picomatch: 2.3.1
+    dev: true
+
   /argparse@1.0.10:
     resolution: {integrity: sha512-o5Roy6tNG4SL/FOkCAN6RzjiakZS25RLYFrcMttJqbdd8BWrnA+fGz57iN5Pb06pvBGvl5gQ0B48dJlslXvoTg==}
     dependencies:
@@ -1594,6 +1639,11 @@ packages:
 
   /base64-js@1.5.1:
     resolution: {integrity: sha512-AKpaYlHn8t4SVbOHCy+b5+KKgvR4vrsD8vbvrbiQJps7fKDTkjkDry6ji0rUJjC0kzbNePLwzxq8iypo41qeWA==}
+    dev: true
+
+  /binary-extensions@2.2.0:
+    resolution: {integrity: sha512-jDctJ/IVQbZoJykoeHbhXpOlNBqGNcwXJKJog42E5HDPUwQTSdjCHdihjj0DlnheQ7blbT6dHOafNAiS8ooQKA==}
+    engines: {node: '>=8'}
     dev: true
 
   /bl@4.1.0:
@@ -1722,6 +1772,21 @@ packages:
 
   /check-error@1.0.2:
     resolution: {integrity: sha512-BrgHpW9NURQgzoNyjfq0Wu6VFO6D7IZEmJNdtgNqpzGG8RuNFHt2jQxWlAs4HMe119chBnv+34syEZtc6IhLtA==}
+    dev: true
+
+  /chokidar@3.5.3:
+    resolution: {integrity: sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==}
+    engines: {node: '>= 8.10.0'}
+    dependencies:
+      anymatch: 3.1.3
+      braces: 3.0.2
+      glob-parent: 5.1.2
+      is-binary-path: 2.1.0
+      is-glob: 4.0.3
+      normalize-path: 3.0.0
+      readdirp: 3.6.0
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /clean-stack@2.2.0:
@@ -2778,6 +2843,10 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immutable@4.3.0:
+    resolution: {integrity: sha512-0AOCmOip+xgJwEVTQj1EfiDDOkPmuyllDuTuEX+DDXUgapLAsBIfkg3sxCYyCEA8mQqZrrxPUGjcOQ2JS3WLkg==}
+    dev: true
+
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -2840,6 +2909,13 @@ packages:
     resolution: {integrity: sha512-zB9CruMamjym81i2JZ3UMn54PKGsQzsJeo6xvN3HJJ4CAsQNB6iRutp2To77OfCNuoxspsIhzaPoO1zyCEhFOg==}
     dependencies:
       has-bigints: 1.0.2
+    dev: true
+
+  /is-binary-path@2.1.0:
+    resolution: {integrity: sha512-ZMERYes6pDydyuGidse7OsHxtbI7WVeUEozgR/g7rd0xUimYNlvZRE/K2MgZTjWy725IfelLeVcEM97mmtRGXw==}
+    engines: {node: '>=8'}
+    dependencies:
+      binary-extensions: 2.2.0
     dev: true
 
   /is-boolean-object@1.1.2:
@@ -3707,6 +3783,13 @@ packages:
       util-deprecate: 1.0.2
     dev: true
 
+  /readdirp@3.6.0:
+    resolution: {integrity: sha512-hOS089on8RduqdbhvQ5Z37A0ESjsqz6qnRcffsMU3495FuTdqSm+7bhJ29JvIOsBDEEnan5DPu9t3To9VRlMzA==}
+    engines: {node: '>=8.10.0'}
+    dependencies:
+      picomatch: 2.3.1
+    dev: true
+
   /regenerator-runtime@0.13.11:
     resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
     dev: true
@@ -3796,6 +3879,16 @@ packages:
 
   /safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
+    dev: true
+
+  /sass@1.63.6:
+    resolution: {integrity: sha512-MJuxGMHzaOW7ipp+1KdELtqKbfAWbH7OLIdoSMnVe3EXPMTmxTmlaZDCTsgIpPCs3w99lLo9/zDKkOrJuT5byw==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.0
+      source-map-js: 1.0.2
     dev: true
 
   /scheduler@0.19.1:
@@ -4166,7 +4259,7 @@ packages:
     engines: {node: '>= 0.8'}
     dev: true
 
-  /vite-node@0.32.2(@types/node@20.3.2):
+  /vite-node@0.32.2(@types/node@20.3.2)(sass@1.63.6):
     resolution: {integrity: sha512-dTQ1DCLwl2aEseov7cfQ+kDMNJpM1ebpyMMMwWzBvLbis8Nla/6c9WQcqpPssTwS6Rp/+U6KwlIj8Eapw4bLdA==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -4176,7 +4269,7 @@ packages:
       mlly: 1.4.0
       pathe: 1.1.1
       picocolors: 1.0.0
-      vite: 4.3.9(@types/node@20.3.2)
+      vite: 4.3.9(@types/node@20.3.2)(sass@1.63.6)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -4187,7 +4280,7 @@ packages:
       - terser
     dev: true
 
-  /vite@2.9.16:
+  /vite@2.9.16(sass@1.63.6):
     resolution: {integrity: sha512-X+6q8KPyeuBvTQV8AVSnKDvXoBMnTx8zxh54sOwmmuOdxkjMmEJXH2UEchA+vTMps1xw9vL64uwJOWryULg7nA==}
     engines: {node: '>=12.2.0'}
     hasBin: true
@@ -4207,11 +4300,12 @@ packages:
       postcss: 8.4.24
       resolve: 1.22.2
       rollup: 2.77.3
+      sass: 1.63.6
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vite@4.3.9(@types/node@20.3.2):
+  /vite@4.3.9(@types/node@20.3.2)(sass@1.63.6):
     resolution: {integrity: sha512-qsTNZjO9NoJNW7KnOrgYwczm0WctJ8m/yqYAMAK9Lxt4SoySUfS5S8ia9K7JHpa3KEeMfyF8LoJ3c5NeBJy6pg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -4240,11 +4334,12 @@ packages:
       esbuild: 0.17.19
       postcss: 8.4.24
       rollup: 3.25.2
+      sass: 1.63.6
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
 
-  /vitepress-theme-demoblock@1.4.2(react-dom@16.14.0)(react@16.14.0):
+  /vitepress-theme-demoblock@1.4.2(react-dom@16.14.0)(react@16.14.0)(sass@1.63.6):
     resolution: {integrity: sha512-OMIRg1JJI8NvBVLFu2G0cd+gT5IzXZfTsV7yws7GfRXZE3Q4qLO5cR1+ngNnFZw44ID1oLk+Yu9HZM+AJYtgWA==}
     engines: {node: '>=14.0.0'}
     hasBin: true
@@ -4255,7 +4350,7 @@ packages:
       markdown-it: 12.3.2
       minimist: 1.2.8
       prettier: 2.8.8
-      vitepress: 0.16.1(react-dom@16.14.0)(react@16.14.0)
+      vitepress: 0.16.1(react-dom@16.14.0)(react@16.14.0)(sass@1.63.6)
       yaml: 2.3.1
     transitivePeerDependencies:
       - less
@@ -4266,7 +4361,7 @@ packages:
       - supports-color
     dev: true
 
-  /vitepress@0.16.1(react-dom@16.14.0)(react@16.14.0):
+  /vitepress@0.16.1(react-dom@16.14.0)(react@16.14.0)(sass@1.63.6):
     resolution: {integrity: sha512-jsgNY+b4mngVHQ1mZZ7ZGJliup/nM0jwdKTGoptwVzSQfkx5i3lF14jRRMb6ulC+9X5xbQ7N/zNcWqVWMFd/cQ==}
     engines: {node: '>=12.0.0'}
     hasBin: true
@@ -4296,7 +4391,7 @@ packages:
       polka: 0.5.2
       prismjs: 1.29.0
       sirv: 1.0.19
-      vite: 2.9.16
+      vite: 2.9.16(sass@1.63.6)
       vue: 3.3.4
     transitivePeerDependencies:
       - less
@@ -4307,7 +4402,7 @@ packages:
       - supports-color
     dev: true
 
-  /vitepress@1.0.0-beta.3(@algolia/client-search@4.18.0)(react-dom@16.14.0)(react@16.14.0)(search-insights@2.6.0):
+  /vitepress@1.0.0-beta.3(@algolia/client-search@4.18.0)(react-dom@16.14.0)(react@16.14.0)(sass@1.63.6)(search-insights@2.6.0):
     resolution: {integrity: sha512-GR5Pvr/o343NN1M4Na1shhDYZRrQbjmLq7WE0lla0H8iDPAsHE8agTHLWfu3FWx+3q2KA29sv16+0O9RQKGjlA==}
     hasBin: true
     dependencies:
@@ -4322,7 +4417,7 @@ packages:
       mark.js: 8.11.1
       minisearch: 6.1.0
       shiki: 0.14.2
-      vite: 4.3.9(@types/node@20.3.2)
+      vite: 4.3.9(@types/node@20.3.2)(sass@1.63.6)
       vue: 3.3.4
     transitivePeerDependencies:
       - '@algolia/client-search'
@@ -4350,7 +4445,7 @@ packages:
       - universal-cookie
     dev: true
 
-  /vitest@0.32.2(happy-dom@9.20.3):
+  /vitest@0.32.2(happy-dom@9.20.3)(sass@1.63.6):
     resolution: {integrity: sha512-hU8GNNuQfwuQmqTLfiKcqEhZY72Zxb7nnN07koCUNmntNxbKQnVbeIS6sqUgR3eXSlbOpit8+/gr1KpqoMgWCQ==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
@@ -4404,8 +4499,8 @@ packages:
       strip-literal: 1.0.1
       tinybench: 2.5.0
       tinypool: 0.5.0
-      vite: 4.3.9(@types/node@20.3.2)
-      vite-node: 0.32.2(@types/node@20.3.2)
+      vite: 4.3.9(@types/node@20.3.2)(sass@1.63.6)
+      vite-node: 0.32.2(@types/node@20.3.2)(sass@1.63.6)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less

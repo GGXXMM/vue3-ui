@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue"
+// import Test from "./components/Test.tsx"
 </script>
 
 <template>
@@ -12,6 +13,8 @@ import HelloWorld from './components/HelloWorld.vue'
     </a>
   </div>
   <HelloWorld msg="Vite + Vue" />
+  <!-- <Test></Test> -->
+  <UButton type="primary">确定</UButton>
 </template>
 
 <style scoped>

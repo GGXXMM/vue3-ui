@@ -27,8 +27,11 @@ export default defineConfig({
   },
   markdown: {
     config(md) {
+      // 这里可以使用markdown-it插件
       const { demoBlockPlugin } = require('vitepress-theme-demoblock')
-      md.use(demoBlockPlugin)
+      md.use(demoBlockPlugin, {
+        cssPreprocessor: 'scss'
+      })
     }
   }
 })

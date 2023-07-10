@@ -1,6 +1,6 @@
 module.exports = {
     // printWidth: 80,
-    // tabWidth: 2,
+    tabWidth: 2,
     // useTabs: false,
     semi: false, // 未尾分号, default:  true
     singleQuote: false, // 单引号 default: false
@@ -17,5 +17,5 @@ module.exports = {
     // htmlWhitespaceSensitivity: 'css',
     // vueIndentScriptAndStyle: false,  // .vue 缩进
     endOfLine: "auto", // default lf
-  };
+};
   
