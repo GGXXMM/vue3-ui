@@ -1,5 +1,5 @@
 ## vue3-ui 简介
-基于Vue3框架的UI组件库，适用于PC端（仿element-plus）
+基于Vue3框架的UI组件库，适用于PC端
 
 ## 技术栈
 - Vue 3

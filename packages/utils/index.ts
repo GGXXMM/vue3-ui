@@ -15,6 +15,5 @@ export const installComponent = (
 }
 
 // 拼装组件className
-export const getComponentCls = (componentName: string): string => {
-  return `${CLASS_PREFIX}-${componentName}`
-}
+export const getComponentCls = (componentName: string): string =>
+  `${CLASS_PREFIX}-${componentName}`
