@@ -23,6 +23,7 @@ export default defineComponent({
   },
   emits: ["click"],
   setup(props, { slots, emit }) {
+    console.log(props)
     const list = ref<string[]>(["a", "b", "c"])
     const count = ref(0)
     const inc = () => {

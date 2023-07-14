@@ -10,13 +10,15 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
+    "build:component": "node ./scripts/build.js",
     "preview": "vite preview",
     "lint": "eslint . --ext .js,.ts,.tsx,.vue --fix",
     "prepare": "husky install",
     "docs:dev": "pnpm run -C docs dev",
     "docs:build": "pnpm run -C docs build",
     "docs:preview": "pnpm run -C docs preview",
-    "test": "vitest"
+    "test": "vitest",
+    "commit": "git add . && git cz"
   },
   "dependencies": {
     "@vue3-ui/components": "workspace:^",
@@ -24,16 +26,20 @@
     "vue": "^3.3.4"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@commitlint/config-conventional": "^17.6.6",
     "@testing-library/vue": "^7.0.0",
     "@typescript-eslint/eslint-plugin": "^5.60.0",
     "@typescript-eslint/parser": "^5.60.0",
     "@vitejs/plugin-vue": "^4.1.0",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vitest/ui": "^0.33.0",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.43.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-vue": "^9.15.1",
+    "fs-extra": "^11.1.1",
     "happy-dom": "^9.20.3",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
@@ -43,6 +49,11 @@
     "vite": "^4.3.9",
     "vitest": "^0.32.2",
     "vue-tsc": "^1.4.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
   },
   "lint-staged": {
     "*.{js,ts,tsx}": "eslint --cache --fix"
