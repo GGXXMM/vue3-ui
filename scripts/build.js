@@ -25,11 +25,11 @@ const outputDir = path.resolve(__dirname, "../build")
 // 生成 package.json
 const createPackageJson = name => {
   const fileStr = `{
-    "name": "${name ? name : "vue3-ui"}",
+    "name": "${name ? name : "pc-vue3-ui"}",
     "version": "${version}",
-    "description": "Vue3组件库",
-    "main": "${name ? "index.umd.js" : "vue3-ui.umd.js"}",
-    "module":"${name ? "index.mjs" : "vue3-ui.mjs"}",
+    "description": "Vue3组件库，beta版本仅用来测试发布",
+    "main": "${name ? "index.umd.js" : "pc-vue3-ui.umd.js"}",
+    "module":"${name ? "index.mjs" : "pc-vue3-ui.mjs"}",
     "repository": {
       "type": "git",
       "url": "git+https://github.com/GGXXMM/vue3-ui.git"
@@ -77,8 +77,8 @@ const buildAll = async () => {
       build: {
         lib: {
           entry: compontsDir,
-          name: "vue3-ui",
-          fileName: "vue3-ui",
+          name: "pc-vue3-ui",
+          fileName: "pc-vue3-ui",
           formats: ["es", "umd"]
         },
         rollupOptions,

@@ -1,9 +1,9 @@
 {
     "name": "button",
-    "version": "0.0.1",
-    "description": "Vue3组件库",
+    "version": "0.0.1-beta.1",
+    "description": "Vue3组件库，beta版本仅用来测试发布",
     "main": "index.umd.js",
-    "module":"index.umd.js",
+    "module":"index.mjs",
     "repository": {
       "type": "git",
       "url": "git+https://github.com/GGXXMM/vue3-ui.git"

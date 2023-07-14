@@ -1,5 +1,5 @@
 {
-  "name": "@vue3-ui/components",
+  "name": "@pc-vue3-ui/components",
   "version": "1.0.0",
   "description": "",
   "main": "index.ts",
@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@vue3-ui/theme-chalk": "workspace:^",
-    "@vue3-ui/utils": "workspace:^"
+    "@pc-vue3-ui/theme-chalk": "workspace:^",
+    "@pc-vue3-ui/utils": "workspace:^"
   }
 }

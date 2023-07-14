@@ -1,7 +1,7 @@
 {
-  "name": "vue3-ui",
+  "name": "pc-vue3-ui",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.0.1-beta.1",
   "workspaces": [
     "packages/*",
     "play",
@@ -21,8 +21,8 @@
     "commit": "git add . && git cz"
   },
   "dependencies": {
-    "@vue3-ui/components": "workspace:^",
-    "@vue3-ui/theme-chalk": "workspace:^",
+    "@pc-vue3-ui/components": "workspace:^",
+    "@pc-vue3-ui/theme-chalk": "workspace:^",
     "vue": "^3.3.4"
   },
   "devDependencies": {

@@ -1,9 +1,9 @@
 {
-    "name": "vue3-ui",
-    "version": "0.0.1",
-    "description": "Vue3组件库",
-    "main": "vue3-ui.umd.js",
-    "module":"vue3-ui.mjs",
+    "name": "pc-vue3-ui",
+    "version": "0.0.1-beta.1",
+    "description": "Vue3组件库，beta版本仅用来测试发布",
+    "main": "pc-vue3-ui.umd.js",
+    "module":"pc-vue3-ui.mjs",
     "repository": {
       "type": "git",
       "url": "git+https://github.com/GGXXMM/vue3-ui.git"

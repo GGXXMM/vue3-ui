@@ -1,6 +1,6 @@
 import { computed, defineComponent, toRefs } from "vue"
 import { buttonProps, ButtonProps } from "./button-type"
-import { getComponentCls } from "@vue3-ui/utils"
+import { getComponentCls } from "@pc-vue3-ui/utils"
 
 export default defineComponent({
   name: "UButton",

@@ -8,10 +8,10 @@ importers:
 
   .:
     dependencies:
-      '@vue3-ui/components':
+      '@pc-vue3-ui/components':
         specifier: workspace:^
         version: link:packages/components
-      '@vue3-ui/theme-chalk':
+      '@pc-vue3-ui/theme-chalk':
         specifier: workspace:^
         version: link:packages/theme-chalk
       vue:
@@ -105,10 +105,10 @@ importers:
 
   packages/components:
     dependencies:
-      '@vue3-ui/theme-chalk':
+      '@pc-vue3-ui/theme-chalk':
         specifier: workspace:^
         version: link:../theme-chalk
-      '@vue3-ui/utils':
+      '@pc-vue3-ui/utils':
         specifier: workspace:^
         version: link:../utils
 

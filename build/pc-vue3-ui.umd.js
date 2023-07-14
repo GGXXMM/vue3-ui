@@ -4,7 +4,7 @@
     : typeof define == "function" && define.amd
     ? define(["exports", "vue"], t)
     : ((o = typeof globalThis < "u" ? globalThis : o || self),
-      t((o["vue3-ui"] = {}), o.vue))
+      t((o["pc-vue3-ui"] = {}), o.vue))
 })(this, function (o, t) {
   "use strict"
   const i = "u",

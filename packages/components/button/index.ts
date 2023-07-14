@@ -1,5 +1,5 @@
 import { App } from "vue"
-import { Vue3UIOption, installComponent } from "@vue3-ui/utils"
+import { Vue3UIOption, installComponent } from "@pc-vue3-ui/utils"
 import Button from "./src/button"
 
 // 具名导出
