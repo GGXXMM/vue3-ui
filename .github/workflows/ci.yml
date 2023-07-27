@@ -12,9 +12,15 @@ jobs:
     steps:
     # 下载代码
     - uses: actions/checkout@v3
+    # 下载安装 pnpm
+    - uses: pnpm/action-setup@0609f0983b7a228f052f81ef4c3d6510cae254ad
+      with:
+      version: 8.6.6
     # 下载安装 Node.js
     - uses: actions/setup-node@v3
       with:
         node-version: 16.14.0
-    - run: npm install
-    - run: npm run build
+        cache: 'pnpm'
+    - run: pnpm -v
+    - run: pnpm install
+    - run: pnpm run build
