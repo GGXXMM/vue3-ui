@@ -1,5 +1,6 @@
 const path = require("path")
-const fs = require("fs-extra")
+const fs = require("fs")
+const fsExtra = require("fs-extra")
 // 引入 vite 的 build 方法，进行编译构建
 const { defineConfig, build } = require("vite")
 const vue = require("@vitejs/plugin-vue")
@@ -45,7 +46,7 @@ const createPackageJson = name => {
     name ? `${name}/package.json` : `package.json`
   )
 
-  fs.outputFile(filePath, fileStr, "utf-8")
+  fsExtra.outputFile(filePath, fileStr, "utf-8")
 }
 
 /** 单组件按需构建 */
@@ -90,20 +91,31 @@ const buildAll = async () => {
   createPackageJson()
 }
 
+// copy README.md
+const copyFiles = () => {
+  const markdown = fs.createReadStream(path.resolve(__dirname, "../README.md"))
+  markdown.pipe(
+    fs.createWriteStream(path.resolve(__dirname, "../build/README.md"))
+  )
+}
+
 const buildLib = async () => {
   await buildAll()
 
   // 按需打包
-  fs.readdirSync(compontsDir)
+  fsExtra
+    .readdirSync(compontsDir)
     .filter(name => {
       // 获取组件的目录
       const componentDir = path.resolve(compontsDir, name)
-      const isDir = fs.lstatSync(componentDir).isDirectory()
-      return isDir && fs.readdirSync(componentDir).includes("index.ts")
+      const isDir = fsExtra.lstatSync(componentDir).isDirectory()
+      return isDir && fsExtra.readdirSync(componentDir).includes("index.ts")
     })
     .forEach(async name => {
       await buildSingle(name)
     })
+
+  copyFiles()
 }
 
 buildLib()
