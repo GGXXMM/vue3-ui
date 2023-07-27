@@ -1,0 +1,20 @@
+name: 'CI'
+
+on: 
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    # 指定托管运行器（操作系统）
+    runs-on: ubuntu-latest
+    steps:
+    # 下载代码
+    - uses: actions/checkout@v3
+    # 下载安装 Node.js
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 16.14.0
+    - run: pnpm install
+    - run: pnpm run build
