@@ -1,14 +1,15 @@
 import Theme from 'vitepress/theme'
-import Demo from 'vitepress-theme-demoblock/components/Demo.vue'
-import DemoBlock from 'vitepress-theme-demoblock/components/DemoBlock.vue'
+import './demo-block.scss'
+import { registerComponents } from './register-components'
+import Vue3UI from '@pc-vue3-ui/components'
 import type {App} from 'vue'
 
 export default {
   ...Theme,
   // 扩展应用程序实例
-  enhanceApp({app}:{app:App<never>}) {
+  enhanceApp({app}: {app:App<never>}) {
     // 注册组件
-    app.component('Demo', Demo)
-    app.component('DemoBlock', DemoBlock)
+    registerComponents(app)
+    app.use(Vue3UI)
   }
 }

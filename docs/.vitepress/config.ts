@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress'
-
+// import vueJsx from '@vitejs/plugin-vue-jsx'
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "Vue3 UI",
@@ -7,22 +7,22 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: 'Home', link: '/' },
-      { text: 'Docs', link: '/component/button/' }
+      { text: "Home", link: "/" },
+      { text: "Docs", link: "/components/button/" }
     ],
 
     sidebar: [
       {
-        text: '通用',
+        text: "通用",
         items: [
-          { text: '按钮', link: '/component/button/' },
-          { text: '图标', link: '/component/icon/' }
+          { text: "按钮", link: "/components/button/" },
+          { text: "图标", link: "/components/icon/" }
         ]
       }
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: "github", link: "https://github.com/GGXXMM/vue3-ui" }
     ]
   },
   markdown: {
