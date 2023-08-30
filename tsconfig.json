@@ -25,7 +25,8 @@
     "*/**/*.ts", 
     "*/**/*.d.ts", 
     "*/**/*.tsx",
-    "*/**/*.vue"
+    "*/**/*.vue",
+    "docs/.vitepress/theme/*.ts"
   ],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
