@@ -15,8 +15,9 @@ export default defineConfig({
       {
         text: "通用",
         items: [
-          { text: "按钮", link: "/components/button/" },
-          { text: "图标", link: "/components/icon/" }
+          { text: "按钮 Button", link: "/components/button/" },
+          { text: "树形控件 Tree", link: "/components/tree/" },
+          { text: "图标 Icon", link: "/components/icon/" }
         ]
       }
     ],
