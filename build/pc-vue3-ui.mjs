@@ -1,12 +1,12 @@
-import { defineComponent as r, toRefs as d, computed as p, createVNode as b, isVNode as g } from "vue";
-const c = "u", a = "_Vue3UI", m = (t, e, o) => {
-  C(t, o), t.component(e.name, e);
-}, C = (t, e = { classPrefix: c }) => {
-  t.config.globalProperties[a] = {
-    ...t.config.globalProperties[a] ?? {},
-    classPrefix: e.classPrefix
+import { defineComponent as d, toRefs as b, computed as g, createVNode as u, isVNode as m, unref as y } from "vue";
+const f = "u", i = "_Vue3UI", C = (e, t, o) => {
+  P(e, o), e.component(t.name, t);
+}, P = (e, t = { classPrefix: f }) => {
+  e.config.globalProperties[i] = {
+    ...e.config.globalProperties[i] ?? {},
+    classPrefix: t.classPrefix
   };
-}, y = (t) => `${c}-${t}`, S = {
+}, S = (e) => `${f}-${e}`, I = {
   type: {
     type: String,
     default: "default"
@@ -27,40 +27,78 @@ const c = "u", a = "_Vue3UI", m = (t, e, o) => {
     type: Function
   }
 };
-function P(t) {
-  return typeof t == "function" || Object.prototype.toString.call(t) === "[object Object]" && !g(t);
+function $(e) {
+  return typeof e == "function" || Object.prototype.toString.call(e) === "[object Object]" && !m(e);
 }
-const $ = /* @__PURE__ */ r({
+const v = /* @__PURE__ */ d({
   name: "UButton",
-  props: S,
-  setup(t, {
-    slots: e
+  props: I,
+  setup(e, {
+    slots: t
   }) {
     const {
       type: o,
-      size: u,
-      disabled: s
-    } = d(t), n = y("button"), i = p(() => [n, `${n}--${o.value}`, `${n}--${u.value}`, s.value ? "is-disabled" : ""]);
+      size: s,
+      disabled: r
+    } = b(e), n = S("button"), a = g(() => [n, `${n}--${o.value}`, `${n}--${s.value}`, r.value ? "is-disabled" : ""]);
     return () => {
       const {
-        tag: f
-      } = t, l = e.default ? e.default() : "按钮";
-      return b(f, {
-        disabled: s.value,
-        class: i.value
-      }, P(l) ? l : {
-        default: () => [l]
+        tag: l
+      } = e, c = t.default ? t.default() : "按钮";
+      return u(l, {
+        disabled: r.value,
+        class: a.value
+      }, $(c) ? c : {
+        default: () => [c]
       });
     };
   }
-}), v = [$], _ = {
-  install(t, e) {
-    v.forEach((o) => {
-      m(t, o, e);
+}), x = {
+  data: {
+    type: Object,
+    required: !0
+  }
+};
+function p(e = [], t = 0, o = null) {
+  return t++, e.reduce((s, r) => {
+    const n = { ...r };
+    if (n.level = t, n.parentId = o, n.children) {
+      const a = n.id, l = p(n.children, t, a);
+      return delete n.children, s.concat(n, l);
+    } else
+      return n.isLeaf = !0, s.concat(n);
+  }, []);
+}
+function h(e) {
+  return {
+    innerData: p(y(e))
+  };
+}
+const L = /* @__PURE__ */ d({
+  name: "UTree",
+  props: x,
+  setup(e, {
+    slots: t
+  }) {
+    const {
+      innerData: o
+    } = h(e.data);
+    return () => u("div", {
+      class: "u-tree"
+    }, [o.map((s) => u("div", {
+      style: {
+        paddingLeft: `${10 * (s.level - 1)}px`
+      }
+    }, [s.label]))]);
+  }
+}), O = [v, L], j = {
+  install(e, t) {
+    O.forEach((o) => {
+      C(e, o, t);
     });
   }
 };
 export {
-  $ as Button,
-  _ as default
+  v as Button,
+  j as default
 };

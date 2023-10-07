@@ -91,11 +91,19 @@ const buildAll = async () => {
   createPackageJson()
 }
 
-// copy README.md
+// copy文件
+// README.md
+// 样式 index.css
 const copyFiles = () => {
   const markdown = fs.createReadStream(path.resolve(__dirname, "../README.md"))
+  const style = fs.createReadStream(
+    path.resolve(__dirname, "../packages/theme-chalk/index.css")
+  )
   markdown.pipe(
     fs.createWriteStream(path.resolve(__dirname, "../build/README.md"))
+  )
+  style.pipe(
+    fs.createWriteStream(path.resolve(__dirname, "../build/index.css"))
   )
 }
 
