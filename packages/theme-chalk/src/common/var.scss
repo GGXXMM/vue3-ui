@@ -183,6 +183,9 @@ $box-shadow: map.merge(
 );
 
 // Typography
+$--font-path: 'fonts' !default;
+$--font-display: 'auto' !default;
+
 $font-family: () !default;
 $font-family: map.merge(
   (

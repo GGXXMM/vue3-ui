@@ -15,6 +15,7 @@ import HelloWorld from "./components/HelloWorld.vue"
   <HelloWorld msg="Vite + Vue" />
   <!-- <Test></Test> -->
   <UButton type="primary">确定</UButton>
+  <UIcon name="success" :size="20" color="green"></UIcon>
 </template>
 
 <style scoped>
