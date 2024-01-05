@@ -8,7 +8,7 @@ export interface ITreeNode {
   /**操作状态 */
   selected?: boolean // 是否选中
   checked?: boolean // 是否勾选
-  expanded?: boolean // 是否展开
+  expanded?: boolean // 是否展开/折叠：true展开、false 折叠
   /**禁用操作开关 */
   disableSelect?: boolean
   disableChecked?: boolean
