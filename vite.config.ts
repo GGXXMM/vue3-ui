@@ -10,11 +10,11 @@ export default defineConfig({
   test: {
     // enable jest-like global test APIs
     globals: true,
-    // simulate DOM with happy-dom
+    // simulate DOM with happy-dom 模拟DOM环境
     environment: "happy-dom",
     // support tsx
     transformMode: {
-      web: [/.[tj]sx$/]
+      web: [/.[tj]sx$/] // 匹配.ts,.tsx文件
     }
   }
 })

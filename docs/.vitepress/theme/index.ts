@@ -5,6 +5,10 @@ import Vue3UI from '@pc-vue3-ui/components'
 import { registerComponents } from './register-components'
 import type {App} from 'vue'
 
+// 引入字体图标css
+import './iconfont.css'
+import './iconfont.js'
+
 export default {
   ...Theme,
   // 扩展应用程序实例
