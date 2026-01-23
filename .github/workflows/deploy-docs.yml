@@ -6,6 +6,7 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+# 顶层权限配置（统一声明，子任务无需重复）
 permissions:
   contents: read
   pages: write
@@ -15,17 +16,17 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      pages: write
-      id-token: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          # 可选：VitePress 构建可能需要完整提交历史（解决 lastUpdated 功能失效）
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm' # 新增：缓存 npm 依赖，加速构建
 
       - name: Install dependencies
         run: npm ci
@@ -36,14 +37,20 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v1
         with:
-          path: docs/.vitepress/dist
+          path: docs/.vitepress/dist # 确认该路径是 VitePress 实际打包输出目录
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    # 核心修复：新增 environment 配置（新版 deploy-pages 强制要求）
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     permissions:
       pages: write
       id-token: write
+      contents: read # 新增：补充缺失的只读权限
     steps:
       - name: Deploy to GitHub Pages
+        id: deployment # 新增：添加 id 用于获取部署后的 Pages 地址
         uses: actions/deploy-pages@v1
